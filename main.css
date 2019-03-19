@@ -1,0 +1,524 @@
+body {
+  background: #fff;
+  font-family: sans-serif;
+}
+
+.main-floor {
+  margin: 4em auto;
+  display: grid;
+  width: 720px;
+  grid-template-columns: repeat(3, 80px) 120px repeat(4, 80px) 40px;
+  grid-template-rows: repeat(8, 80px);
+  position: relative;
+}
+.main-floor > div {
+  position: relative;
+}
+
+.bathroom {
+  grid-column: 1/span 3;
+  grid-row: 1/span 2;
+  z-index: 2;
+  border: 4px solid #096b72;
+  border-width: 4px 0 4px 4px;
+}
+
+.bedroom-1 {
+  grid-column: 1/span 3;
+  grid-row: 3/span 5;
+  border: 4px solid #096b72;
+  border-width: 0 0 4px 4px;
+}
+
+.bedroom-2 {
+  grid-column: 4/span 2;
+  grid-row: 5/span 3;
+  border: 4px solid #096b72;
+  border-width: 4px 4px 4px 4px;
+}
+
+.hallway {
+  grid-column: 4/span 1;
+  grid-row: 1/span 4;
+  border: 4px solid #096b72;
+  border-width: 4px 4px 0 4px;
+}
+
+.kitchen {
+  grid-column: 5/span 5;
+  grid-row: 3/span 2;
+  border: 4px solid #096b72;
+  border-width: 4px 4px 0 0;
+}
+
+.living-room {
+  grid-column: 6/span 4;
+  grid-row: 5/span 3;
+  border: 4px solid #096b72;
+  border-width: 0 4px 4px 0;
+}
+
+/* Stuff in rooms */
+.hallway .main-entry {
+  top: -55px;
+  left: 23px;
+  transform: rotate(180deg);
+}
+.hallway .bathroom-entry {
+  top: 80px;
+  left: -4px;
+  transform: scaleY(-1);
+}
+.hallway .bedroom1-entry {
+  bottom: 18px;
+  left: -55px;
+  transform: scaleX(-1);
+}
+.hallway .bedroom2-entry {
+  bottom: -55px;
+  left: 23px;
+}
+.hallway .living-entry {
+  bottom: 18px;
+  left: 61px;
+  transform: rotate(180deg);
+}
+
+.kitchen .ref {
+  position: absolute;
+  border: 2px solid #096b72;
+  top: -2px;
+  width: 48px;
+  height: 48px;
+  left: 4px;
+}
+.kitchen .ref:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  width: 52px;
+  height: 5px;
+  background: #fff;
+  border: 2px solid #096b72;
+}
+.kitchen .cabinets {
+  position: absolute;
+  border: 2px solid #096b72;
+  top: -2px;
+  width: 295px;
+  height: 48px;
+  left: 60px;
+}
+.kitchen .cabinets .stove {
+  position: absolute;
+  width: 48px;
+  height: 40px;
+  border: 2px solid #096b72;
+  left: 104px;
+  top: 2px;
+}
+.kitchen .cabinets .stove .stove-top1:before, .kitchen .cabinets .stove .stove-top1:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 18px;
+  border-radius: 50%;
+  border: 2px solid #096b72;
+  left: 3px;
+}
+.kitchen .cabinets .stove .stove-top1:after {
+  right: 3px;
+  left: auto;
+}
+.kitchen .cabinets .stove .stove-top2:before, .kitchen .cabinets .stove .stove-top2:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  border-radius: 50%;
+  border: 2px solid #096b72;
+  left: 6px;
+}
+.kitchen .cabinets .stove .stove-top2:after {
+  right: 6px;
+  left: auto;
+}
+.kitchen .cabinets .sink-tap-1,
+.kitchen .cabinets .sink-tap-2 {
+  position: absolute;
+  width: 14px;
+  height: 28px;
+  border: 2px solid #096b72;
+  left: 202px;
+  top: 10px;
+  border-radius: 4px;
+}
+.kitchen .cabinets .sink-tap-2 {
+  left: 223px;
+  width: 22px;
+}
+.kitchen .cabinets .sink-tap-2:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #096b72;
+  left: -6px;
+  top: -9px;
+}
+
+/*utilities*/
+.door-hor {
+  position: absolute;
+  background: #fff;
+  width: 70px;
+  height: 55px;
+  overflow: hidden;
+  z-index: 10;
+}
+.door-hor:before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 4px;
+  height: 50px;
+  border: 1px solid #096b72;
+}
+.door-hor:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 120px;
+  right: 0px;
+  bottom: 3.5px;
+  border-radius: 82%;
+  border: 1px solid #096b72;
+}
+
+.door-ver {
+  position: absolute;
+  background: #fff;
+  width: 55px;
+  height: 70px;
+  overflow: hidden;
+  z-index: 10;
+}
+.door-ver:before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: 4px;
+  width: 52px;
+  border: 1px solid #096b72;
+}
+.door-ver:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120px;
+  right: 1px;
+  bottom: 0.5px;
+  border-radius: 50%;
+  border: 1px solid #096b72;
+}
+
+.window-hor {
+  position: absolute;
+  top: -6px;
+  height: 6px;
+  border: 2px solid #096b72;
+  width: 80px;
+  background: #e2f0f1;
+  z-index: 10;
+}
+
+.window-ver {
+  position: absolute;
+  right: -6px;
+  top: 8px;
+  height: 140px;
+  border: 2px solid #096b72;
+  width: 6px;
+  background: #e2f0f1;
+}
+
+.vanity {
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  border: 2px solid #096b72;
+  bottom: -2px;
+  right: -2px;
+}
+.vanity:before {
+  content: "";
+  position: absolute;
+  border: 1px solid #096b72;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #096b72;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 5px;
+  left: 50%;
+  margin-left: -7.5px;
+}
+
+.toilet {
+  width: 30px;
+  height: 8px;
+  position: absolute;
+  border: 2px solid #096b72;
+  bottom: -2px;
+  left: 40px;
+}
+.toilet:after {
+  content: "";
+  position: absolute;
+  border: 2px solid #096b72;
+  height: 22px;
+  width: 20px;
+  border-radius: 20px 20px 0 0;
+  top: -26px;
+  left: 50%;
+  margin-left: -12px;
+}
+
+.shower {
+  width: 55px;
+  height: 50px;
+  position: absolute;
+  border: 2px solid #096b72;
+  top: -2px;
+  left: -2px;
+  border-radius: 0 0% 2000% 0;
+}
+.shower:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #096b72;
+  left: 6px;
+  top: 6px;
+}
+
+.bed {
+  width: 140px;
+  height: 70px;
+  position: absolute;
+  border: 2px solid #096b72;
+  right: -2px;
+  top: 35px;
+  border-radius: 8px 0 0 8px;
+  background: #fff;
+}
+.bed .blanket {
+  width: 55%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-right: 2px solid #096b72;
+  background: repeating-linear-gradient(to right, transparent, transparent 6px, rgba(9, 107, 114, 0.5) 6px, rgba(9, 107, 114, 0.5) 8px), repeating-linear-gradient(to bottom, transparent, transparent 6px, rgba(9, 107, 114, 0.5) 6px, rgba(9, 107, 114, 0.5) 8px);
+}
+.bed .blanket:before {
+  content: "";
+  position: absolute;
+  right: -18px;
+  width: 0;
+  height: 100%;
+  border-right: 2px solid #096b72;
+}
+.bed .pillow {
+  width: 25px;
+  border: 2px solid #096b72;
+  height: 40px;
+  border-radius: 6px;
+  right: 8px;
+  top: 14px;
+  position: absolute;
+  background: #ffc107;
+}
+
+.bed-table {
+  width: 30px;
+  height: 30px;
+  top: -2px;
+  right: -2px;
+  position: absolute;
+  border: 2px solid #096b72;
+}
+
+.table {
+  width: 90px;
+  height: 15px;
+  bottom: -2px;
+  right: 20px;
+  position: absolute;
+  border: 2px solid #096b72;
+}
+.table:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #096b72;
+  width: 20px;
+  height: 16px;
+  top: -20px;
+  left: 50%;
+  margin-left: -10px;
+  border-radius: 40px 40px 0 0;
+  background: linear-gradient(to bottom, transparent 0, transparent 50%, #096b72 50%, #096b72 60%, transparent 60%);
+}
+
+.sofa {
+  width: 130px;
+  height: 40px;
+  bottom: -2px;
+  right: 20px;
+  position: absolute;
+  border: 2px solid #096b72;
+  border-radius: 8px 8px 0 0;
+  background: #ffc107;
+}
+.sofa:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #096b72;
+  border-width: 0 2px 2px;
+  width: 80%;
+  height: 70%;
+  left: 8%;
+  border-radius: 0 0 4px 4px;
+  background: #fff;
+}
+.sofa:after {
+  content: "";
+  position: absolute;
+  border: 2px solid #096b72;
+  width: 30px;
+  height: 30px;
+  transform: rotate(60deg);
+  left: -50px;
+  bottom: 50px;
+  border-radius: 6px;
+  background: #ffc107;
+}
+
+.coffee-table,
+.patio-table {
+  width: 40px;
+  height: 40px;
+  bottom: 60px;
+  right: 80px;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #096b72;
+  background: #fff;
+}
+
+.patio-table {
+  width: 30px;
+  height: 30px;
+  bottom: 35px;
+  z-index: 25;
+}
+
+.patio-chair {
+  width: 34px;
+  height: 26px;
+  bottom: 30px;
+  left: 65px;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  border: 2px solid #096b72;
+  background: #ffc107;
+  z-index: 25;
+  transform: rotate(-95deg);
+}
+.patio-chair:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 82%;
+  border-radius: inherit;
+  background: #fff;
+  bottom: 0;
+  left: 10%;
+  border: 1px solid #096b72;
+  border-width: 1px 1px 0;
+}
+.patio-chair:nth-child(5) {
+  transform: rotate(15deg);
+  bottom: 75px;
+  left: 115px;
+}
+
+.tv-set {
+  width: 140px;
+  height: 20px;
+  top: -2px;
+  right: 35px;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  border: 2px solid #096b72;
+}
+
+.rug {
+  width: 150px;
+  height: 110px;
+  top: 25px;
+  right: 35px;
+  position: absolute;
+  background: rgba(255, 193, 7, 0.25);
+}
+
+.name {
+  font: 600 14px/1 sans-serif;
+  text-transform: uppercase;
+  color: #096b72;
+  position: absolute;
+  text-align: center;
+  z-index: 30;
+}
+
+.kitchen .name {
+  top: 50%;
+  left: 15%;
+}
+
+.living-room .name {
+  top: 38px;
+  left: 30%;
+}
+
+.bedroom-1 .name {
+  width: 100px;
+  top: 25px;
+  left: 130px;
+}
+
+.bedroom-2 .name {
+  width: 100px;
+  bottom: 25px;
+  left: 25px;
+}
+
+.bathroom-1 .name {
+  bottom: 40px;
+  right: 50px;
+}
+
+.balcony .name {
+  display: none;
+}
+
+.size {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

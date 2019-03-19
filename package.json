@@ -1,0 +1,14 @@
+{
+  "name": "mi-casa",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch main.scss:main.css --style expanded"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.17.3"
+  }
+}
