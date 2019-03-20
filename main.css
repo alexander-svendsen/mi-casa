@@ -3,6 +3,12 @@ body {
   font-family: sans-serif;
 }
 
+.explanation {
+  text-align: center;
+  color: #053e42cf;
+  line-height: 1;
+}
+
 .main-floor {
   margin: 4em auto;
   display: grid;
