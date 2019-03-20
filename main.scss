@@ -101,6 +101,14 @@ $one-meter: 80px;
     left: 61px;
     transform: rotate(180deg);
   }
+  .rug {
+    left: 18px;
+    top: 18px;
+    width: 76px;
+    height: 240px;
+    position: absolute;
+    background: rgba($color-shade, 0.25);
+  }
 }
 
 
@@ -205,20 +213,57 @@ $one-meter: 80px;
 }
 
 
+.living-room {
+  .sofa {
+    transform: rotate(90deg);
+    left: -50px;
+    top: 125px;
+  }
+
+  .tv-set{
+    transform: rotate(90deg);
+    right: -42px;
+    top: 135px;
+  }
+
+  .rug {
+    left: 50px;
+    width: 110px;
+    height: 150px;
+    top: 65px;
+    position: absolute;
+    background: rgba($color-shade, 0.25);
+  }
+  .coffee-table{
+    top: 110px;
+    left: 100px;
+  }
+
+  .comfy-chair{
+    top: 30px;
+    left: 61px;
+  }
+  .window-hor{
+    bottom: -6px;
+    right: 60px;
+  }
+}
+
+
 /*utilities*/
 
 
 .door-hor {
   position: absolute;
-  background: $color-bg;
   width: 70px;
   height: 55px;
   overflow: hidden;
   z-index: 10;
   &:before {
+    z-index: 1;
     content: "";
     position: absolute;
-    background: #fff;
+    background: $color-bg;
     width: 4px;
     height: 50px;
     border: 1px solid #096b72;
@@ -227,6 +272,7 @@ $one-meter: 80px;
     content: "";
     position: absolute;
     height: 100px;
+    background: $color-bg;
     width: 120px;
     right: 0px;
     bottom: 3.5px;
@@ -237,15 +283,15 @@ $one-meter: 80px;
 
 .door-ver {
   position: absolute;
-  background: $color-bg;
   width: 55px;
   height: 70px;
   overflow: hidden;
   z-index: 10;
   &:before {
+    z-index: 1;
     content: "";
     position: absolute;
-    background: #fff;
+    background: $color-bg;
     height: 4px;
     width: 52px;
     border: 1px solid #096b72;
@@ -253,6 +299,7 @@ $one-meter: 80px;
   &:after {
     content: "";
     position: absolute;
+    background: $color-bg;
     width: 100px;
     height: 120px;
     right: 1px;
@@ -264,7 +311,6 @@ $one-meter: 80px;
 
 .window-hor {
   position: absolute;
-  top: -6px;
   height: 6px;
   border: 2px solid $color-border;
   width: 80px;
@@ -433,10 +479,8 @@ $one-meter: 80px;
 }
 
 .sofa {
-  width: 130px;
-  height: 40px;
-  bottom: -2px;
-  right: 20px;
+  width: 156px;
+  height: 60px;
   position: absolute;
   @include utility-border;
   border-radius: 8px 8px 0 0;
@@ -452,26 +496,22 @@ $one-meter: 80px;
     border-radius: 0 0 4px 4px;
     background: $color-bg;
   }
-  &:after {
-    content: "";
-    position: absolute;
-    @include utility-border;
-    width: 30px;
-    height: 30px;
-    transform: rotate(60deg);
-    left: -50px;
-    bottom: 50px;
-    border-radius: 6px;
-    background: $color-shade;
-  }
+}
+
+.comfy-chair {
+  position: absolute;
+  @include utility-border;
+  width: 30px;
+  height: 30px;
+  transform: rotate(60deg);
+  border-radius: 6px;
+  background: $color-shade;
 }
 
 .coffee-table,
 .patio-table {
   width: 40px;
   height: 40px;
-  bottom: 60px;
-  right: 80px;
   border-radius: 50%;
   position: absolute;
   @include utility-border;
@@ -516,22 +556,11 @@ $one-meter: 80px;
 }
 
 .tv-set {
-  width: 140px;
+  width: 100px;
   height: 20px;
-  top: -2px;
-  right: 35px;
   border-radius: 0 0 50% 50%;
   position: absolute;
   @include utility-border;
-}
-
-.rug {
-  width: 150px;
-  height: 110px;
-  top: 25px;
-  right: 35px;
-  position: absolute;
-  background: rgba($color-shade, 0.25);
 }
 
 .name {
@@ -549,8 +578,8 @@ $one-meter: 80px;
 }
 
 .living-room .name {
-  top: 38px;
-  left: 30%;
+  top: 70px;
+  left: 43%
 }
 
 .bedroom-1 .name {
@@ -573,6 +602,11 @@ $one-meter: 80px;
 
 .balcony .name {
   display: none;
+}
+
+.hallway .name {
+  top: 40px;
+  right: 8px;
 }
 
 .size {
