@@ -249,6 +249,39 @@ $one-meter: 80px;
   }
 }
 
+.bedroom-1 {
+  .bed {
+    width: 160px;
+    height: 144px;
+    transform: scaleX(-1);
+    left: -2px;
+    top: 140px;
+    .pillow {
+      height: 40px;
+      top: 18px;
+      right: 15px;
+      &:nth-child(3) {
+        bottom: 18px;
+        top: auto;
+      }
+    }
+  }
+
+  .top-bed-table {
+    top: 109px;
+    left: -2px;
+  }
+  .bottom-bed-table {
+    bottom: 77px;
+    left: -2px;
+  }
+
+  .window-hor{
+    bottom: -6px;
+    left: 65px;
+  }
+}
+
 
 /*utilities*/
 
@@ -409,9 +442,9 @@ $one-meter: 80px;
     background: repeating-linear-gradient(
                     to right,
                     transparent,
-                    transparent 6px,
-                    rgba($color-border, 0.5) 6px,
-                    rgba($color-border, 0.5) 8px
+                    transparent 12px,
+                    rgba($color-border, 0.5) 12px,
+                    rgba($color-border, 0.5) 16px
     ),
     repeating-linear-gradient(
                     to bottom,
@@ -442,10 +475,8 @@ $one-meter: 80px;
 }
 
 .bed-table {
-  width: 30px;
-  height: 30px;
-  top: -2px;
-  right: -2px;
+  width: 40px;
+  height: 25px;
   position: absolute;
   @include utility-border;
 }
