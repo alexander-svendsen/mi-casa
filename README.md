@@ -1,7 +1,6 @@
 # Mi casa
-Welcome to Mi Casa
+Welcome to Mi Casa. A floor plan made entirely by html and css
 
-The floor plan to my apartment can be found:
 https://alexander-svendsen.github.io/mi-casa  
 
 ### Inspired by 
