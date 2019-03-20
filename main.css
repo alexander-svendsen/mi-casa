@@ -5,8 +5,9 @@ body {
 
 .explanation {
   text-align: center;
-  color: #053e42cf;
+  color: #096b72;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .main-floor {

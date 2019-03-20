@@ -1,14 +1,3 @@
-body {
-  background: #fff;
-  font-family: sans-serif;
-}
-
-.explanation {
-  text-align: center;
-  color: #053e42cf;
-  line-height: 1;
-}
-
 $color-border: #096b72;
 $color-bg: #fff;
 $color-window: rgb(226, 240, 241);
@@ -24,6 +13,17 @@ $one-meter: 80px;
   border: 2px solid $color-border;
 }
 
+body {
+  background: $color-bg;
+  font-family: sans-serif;
+}
+
+.explanation {
+  text-align: center;
+  color: $color-border;
+  line-height: 1;
+  text-transform: uppercase;
+}
 
 .main-floor {
   margin: 4em auto;
