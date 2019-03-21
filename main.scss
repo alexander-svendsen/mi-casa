@@ -323,9 +323,19 @@ body {
 }
 
 .bedroom-2 {
+  .bed {
+    transform: rotate(90deg);
+    bottom: 21px;
+    right: -25px;
+    height: 99px;
+    width: 144px;
+    .pillow {
+      top: 23px;
+    }
+  }
   .window-hor{
     bottom: -6px;
-    left: 60px;
+    left: 30px;
   }
 }
 
@@ -506,8 +516,6 @@ body {
   height: 70px;
   position: absolute;
   @include utility-border;
-  right: -2px;
-  top: 35px;
   border-radius: 8px 0 0 8px;
   background: $color-bg;
   .blanket {
@@ -688,8 +696,8 @@ body {
 
 .bedroom-2 .name {
   width: 100px;
-  bottom: 25px;
-  left: 25px;
+  top: 90px;
+  left: -2px;
 }
 
 
