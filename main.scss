@@ -322,6 +322,24 @@ body {
   }
 }
 
+.balcony {
+  .chair-1{
+    top: 10px;
+    left: 300px;
+    transform: rotate(-30deg);
+  }
+  .chair-2{
+    top: 10px;
+    left: 370px;
+    transform: rotate(30deg);
+
+  }
+  .patio-table {
+    top: 35px;
+    left: 335px;
+  }
+}
+
 
 
 /*utilities*/
@@ -591,21 +609,15 @@ body {
 .patio-table {
   width: 30px;
   height: 30px;
-  bottom: 35px;
-  z-index: 25;
 }
 
 .patio-chair {
   width: 34px;
   height: 26px;
-  bottom: 30px;
-  left: 65px;
   border-radius: 20px 20px 0 0;
   position: absolute;
   @include utility-border;
   background: $color-shade;
-  z-index: 25;
-  transform: rotate(-95deg);
   &:before {
     content: "";
     position: absolute;
@@ -617,11 +629,6 @@ body {
     left: 10%;
     border: 1px solid $color-border;
     border-width: 1px 1px 0;
-  }
-  &:nth-child(5) {
-    transform: rotate(15deg);
-    bottom: 75px;
-    left: 115px;
   }
 }
 
