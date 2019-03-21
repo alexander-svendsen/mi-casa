@@ -104,7 +104,7 @@ body {
     transform: scaleY(-1);
   }
   .bedroom1-entry {
-    bottom: 18px;
+    bottom: 40px;
     left: -55px;
     transform: scaleX(-1);
   }
@@ -284,6 +284,15 @@ body {
 }
 
 .bedroom-1 {
+
+  .block {
+    width: $one-meter * 2;
+    height: $one-meter / 2;
+    background: repeating-linear-gradient(45deg, $color-border, $color-border 2px, $color-bg 2px, $color-bg 8px);
+    @include utility-border;
+    border-width: 0 4px 4px 0;
+  }
+
   .bed {
     width: 160px;
     height: 144px;
@@ -717,8 +726,8 @@ body {
 
 .bedroom-1 .name {
   width: 100px;
-  top: 25px;
-  left: 130px;
+  top: 75px;
+  left: 90px;
 }
 
 .bedroom-2 .name {

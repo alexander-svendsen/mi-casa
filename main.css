@@ -86,7 +86,7 @@ body {
   transform: scaleY(-1);
 }
 .hallway .bedroom1-entry {
-  bottom: 18px;
+  bottom: 40px;
   left: -55px;
   transform: scaleX(-1);
 }
@@ -241,6 +241,13 @@ body {
   transform: scaleX(-1);
 }
 
+.bedroom-1 .block {
+  width: 160px;
+  height: 40px;
+  background: repeating-linear-gradient(45deg, #096b72, #096b72 2px, #fff 2px, #fff 8px);
+  border: 2px solid #096b72;
+  border-width: 0 4px 4px 0;
+}
 .bedroom-1 .bed {
   width: 160px;
   height: 144px;
@@ -634,8 +641,8 @@ body {
 
 .bedroom-1 .name {
   width: 100px;
-  top: 25px;
-  left: 130px;
+  top: 75px;
+  left: 90px;
 }
 
 .bedroom-2 .name {
