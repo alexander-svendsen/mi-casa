@@ -279,6 +279,7 @@ body {
   .door-hor {
     bottom: -55px;
     left: 38px;
+    transform: scaleX(-1);
   }
 }
 
@@ -313,6 +314,12 @@ body {
     bottom: -6px;
     left: 65px;
   }
+
+  .door-hor {
+    bottom: -55px;
+    right: 5px;
+    transform: scaleX(-1);
+  }
 }
 
 .bedroom-2 {
@@ -337,6 +344,20 @@ body {
   .patio-table {
     top: 35px;
     left: 335px;
+  }
+
+  .window-hor {
+    bottom: -5px;
+    right: 2px;
+    width: 280px;
+    height: 3px;
+  }
+
+  .window-ver {
+    bottom: 2px;
+    right: -5px;
+    width: 3px;
+    height: 110px;
   }
 }
 

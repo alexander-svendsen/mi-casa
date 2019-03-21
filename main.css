@@ -238,6 +238,7 @@ body {
 .living-room .door-hor {
   bottom: -55px;
   left: 38px;
+  transform: scaleX(-1);
 }
 
 .bedroom-1 .bed {
@@ -268,6 +269,11 @@ body {
   bottom: -6px;
   left: 65px;
 }
+.bedroom-1 .door-hor {
+  bottom: -55px;
+  right: 5px;
+  transform: scaleX(-1);
+}
 
 .bedroom-2 .window-hor {
   bottom: -6px;
@@ -287,6 +293,18 @@ body {
 .balcony .patio-table {
   top: 35px;
   left: 335px;
+}
+.balcony .window-hor {
+  bottom: -5px;
+  right: 2px;
+  width: 280px;
+  height: 3px;
+}
+.balcony .window-ver {
+  bottom: 2px;
+  right: -5px;
+  width: 3px;
+  height: 110px;
 }
 
 /*utilities*/
