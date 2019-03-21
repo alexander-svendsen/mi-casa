@@ -371,6 +371,27 @@ body {
   }
 }
 
+.bathroom {
+  .vanity {
+    top: -2px;
+    right: -2px;
+  }
+
+  .toilet{
+    bottom: -2px;
+    right: 70px;
+  }
+
+  .rug {
+    right: 35px;
+    top: 55px;
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    background: rgba($color-shade, 0.25);
+  }
+}
+
 
 
 /*utilities*/
@@ -450,41 +471,47 @@ body {
 }
 
 .vanity {
-  width: 90px;
-  height: 30px;
+  width: 148px;
+  height: 44px;
   position: absolute;
   @include utility-border;
-  bottom: -2px;
-  right: -2px;
   &:before {
     content: "";
     position: absolute;
-    border: 1px solid $color-border;
-    box-shadow: 0 0 0 2px $color-bg, 0 0 0 3px $color-border;
-    height: 15px;
-    width: 15px;
+    border: 1px solid #096b72;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #096b72;
+    height: 20px;
+    width: 25px;
     border-radius: 50%;
-    top: 5px;
+    top: 12px;
     left: 50%;
     margin-left: -7.5px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #096b72;
+    left: 76px;
+    top: 2px;
   }
 }
 
 .toilet {
-  width: 30px;
-  height: 8px;
+  width: 80px;
+  height: 14px;
   position: absolute;
   @include utility-border;
-  bottom: -2px;
-  left: 40px;
   &:after {
     content: "";
     position: absolute;
     @include utility-border;
-    height: 22px;
-    width: 20px;
+    height: 26px;
+    width: 24px;
     border-radius: 20px 20px 0 0;
-    top: -26px;
+    top: -30px;
     left: 50%;
     margin-left: -12px;
   }
@@ -492,13 +519,13 @@ body {
 
 
 .shower {
-  width: 55px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   position: absolute;
   @include utility-border;
-  top: -2px;
+  bottom: -2px;
   left: -2px;
-  border-radius: 0 0% 2000% 0;
+  border-radius: 0 30% 0% 0;
   &:before {
     content: "";
     position: absolute;
@@ -507,7 +534,7 @@ body {
     height: 6px;
     border: 1px solid #096b72;
     left: 6px;
-    top: 6px;
+    bottom: 6px;
   }
 }
 
@@ -714,6 +741,11 @@ body {
 .hallway .name {
   top: 40px;
   right: 8px;
+}
+
+.bathroom .name{
+  top: 60px;
+  left: 36px;
 }
 
 .size {
