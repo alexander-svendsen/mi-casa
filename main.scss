@@ -706,6 +706,7 @@ body {
 }
 
 .name {
+  display: none;
   font: 600 14px/1 sans-serif;
   text-transform: uppercase;
   color: $color-border;
@@ -714,49 +715,107 @@ body {
   z-index: 30;
 }
 
-.kitchen .name {
+.size {
+  display: none;
+  font: 600 10px/1 sans-serif;
+  color: $color-border;
+  position: absolute;
+  text-align: center;
+  z-index: 30;
+  &:after{
+    content: "2";
+    vertical-align: super;
+  }
+}
+
+.kitchen:hover .name {
+  display: block;
   top: 50%;
   left: 15%;
 }
 
-.living-room .name {
+.living-room:hover .name {
+  display: block;
   top: 70px;
   left: 43%
 }
 
-.bedroom-1 .name {
+.living-room:hover .size {
+  display: block;
+  top: 85px;
+  left: 56%;
+}
+
+.bedroom-1:hover .name {
+  display: block;
   width: 100px;
   top: 75px;
   left: 90px;
 }
 
-.bedroom-2 .name {
+.bedroom-1:hover .size {
+  display: block;
+  top: 105px;
+  right: 80px;
+}
+
+.bedroom-2:hover .name {
+  display: block;
   width: 100px;
   top: 90px;
   left: -2px;
 }
 
+.bedroom-2:hover .size {
+  display: block;
+  top: 120px;
+  left: 35px;
+}
 
-.bathroom-1 .name {
+.bathroom-1:hover .name {
+  display: block;
   bottom: 40px;
   right: 50px;
 }
 
-.balcony .name {
+.bathroom-1:hover .size {
+  display: block;
+  bottom: 40px;
+  right: 50px;
+}
+
+.balcony:hover .name {
+  display: block;
   bottom: 40px;
   right: 250px;
 }
 
-.hallway .name {
+.balcony:hover .size {
+  display: block;
+  bottom: 25px;
+  right: 272px;
+}
+
+.hallway:hover .name {
+  display: block;
   top: 40px;
   right: 8px;
 }
 
-.bathroom .name{
+.hallway:hover .size {
+  display: block;
+  top: 55px;
+  right: 35px;
+}
+
+.bathroom:hover .name{
+  display: block;
   top: 60px;
   left: 36px;
 }
 
-.size {
-  display: none
+.bathroom:hover .size{
+  display: block;
+  top: 74px;
+  left: 63px;
 }
