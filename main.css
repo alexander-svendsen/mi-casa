@@ -243,7 +243,7 @@ body {
 
 .bedroom-1 .block {
   width: 160px;
-  height: 40px;
+  height: 36px;
   background: repeating-linear-gradient(45deg, #096b72, #096b72 2px, #fff 2px, #fff 8px);
   border: 2px solid #096b72;
   border-width: 0 4px 4px 0;
@@ -253,7 +253,7 @@ body {
   height: 144px;
   transform: scaleX(-1);
   left: -2px;
-  top: 140px;
+  top: 144px;
 }
 .bedroom-1 .bed .pillow {
   height: 40px;
@@ -269,7 +269,7 @@ body {
   left: -2px;
 }
 .bedroom-1 .bottom-bed-table {
-  bottom: 77px;
+  bottom: 70px;
   left: -2px;
 }
 .bedroom-1 .window-hor {
@@ -280,6 +280,14 @@ body {
   bottom: -55px;
   right: 5px;
   transform: scaleX(-1);
+}
+.bedroom-1 .top-closet {
+  top: 37px;
+  left: -2px;
+}
+.bedroom-1 .bottom-closet {
+  bottom: -2px;
+  left: -2px;
 }
 
 .bedroom-2 .bed {
@@ -295,6 +303,10 @@ body {
 .bedroom-2 .window-hor {
   bottom: -6px;
   left: 30px;
+}
+.bedroom-2 .closet {
+  transform: scaleX(-1);
+  right: -2px;
 }
 
 .balcony .chair-1 {
@@ -618,6 +630,31 @@ body {
   border-radius: 0 0 50% 50%;
   position: absolute;
   border: 2px solid #096b72;
+}
+
+.closet {
+  border: 2px solid #096b72;
+  width: 40px;
+  height: 64px;
+  position: absolute;
+}
+.closet:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 44px;
+  height: 30px;
+  transform: rotate(170deg);
+  border: 1px solid #096b72;
+}
+.closet:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 47px;
+  height: 30px;
+  transform: rotate(25deg);
+  border: 1px solid #096b72;
 }
 
 .name {
