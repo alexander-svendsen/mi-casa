@@ -189,6 +189,29 @@
     left: 38px;
     transform: scaleX(-1);
   }
+
+  .table {
+    right: 40px;
+    top: -78px;
+
+    .left-top-chair{
+      top: 10px;
+      left: -40px;
+    }
+    .left-bottom-chair{
+      bottom: 10px;
+      left: -40px;
+    }
+
+    .right-top-chair {
+      top: 10px;
+      right: -40px;
+    }
+    .right-bottom-chair {
+      bottom: 10px;
+      right: -40px;
+    }
+  }
 }
 
 .bedroom-1 {

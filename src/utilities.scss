@@ -197,33 +197,6 @@
   @include utility-border;
 }
 
-.table {
-  width: 90px;
-  height: 15px;
-  bottom: -2px;
-  right: 20px;
-  position: absolute;
-  @include utility-border;
-  &:before {
-    content: "";
-    position: absolute;
-    @include utility-border;
-    width: 20px;
-    height: 16px;
-    top: -20px;
-    left: 50%;
-    margin-left: -10px;
-    border-radius: 40px 40px 0 0;
-    background: linear-gradient(
-                    to bottom,
-                    transparent 0,
-                    transparent 50%,
-                    $color-border 50%,
-                    $color-border 60%,
-                    transparent 60%
-    );
-  }
-}
 
 .sofa {
   width: 156px;
@@ -322,4 +295,21 @@
     transform: rotate(25deg);
     border: 1px solid $color-border;
   }
+}
+
+.table {
+  position: absolute;
+  @include utility-border;
+  width: 68px;
+  height: 110px;
+  border-radius: 10%;
+}
+
+.chair {
+  position: absolute;
+  @include utility-border;
+  background: $color-shade;
+  border-radius: 20%;
+  width: 20px;
+  height: 31px;
 }
