@@ -1,0 +1,325 @@
+@import 'core';
+
+/* Stuff in rooms */
+.hallway {
+  .main-entry {
+    top: -55px;
+    left: 23px;
+    transform: rotate(180deg);
+  }
+  .bathroom-entry {
+    top: 80px;
+    left: -4px;
+    transform: scaleY(-1);
+  }
+  .bedroom1-entry {
+    bottom: 40px;
+    left: -55px;
+    transform: scaleX(-1);
+  }
+  .bedroom2-entry {
+    bottom: -55px;
+    left: 23px;
+  }
+  .living-entry {
+    bottom: 18px;
+    left: 61px;
+    transform: rotate(180deg);
+  }
+  .rug {
+    left: 18px;
+    top: 18px;
+    width: 76px;
+    height: 240px;
+    position: absolute;
+    background: rgba($color-shade, 0.25);
+  }
+}
+
+
+.kitchen {
+  .ref {
+    position: absolute;
+    @include utility-border;
+    top: -2px;
+    width: 48px;
+    height: 48px;
+    left: 4px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: -4px;
+      width: 52px;
+      height: 5px;
+      background: #fff;
+      @include utility-border;
+    }
+  }
+
+  .cabinets {
+    position: absolute;
+    @include utility-border;
+    top: -2px;
+    width: 295px;
+    height: 48px;
+    left: 60px;
+    .stove {
+      position: absolute;
+      width: 48px;
+      height: 40px;
+      @include utility-border;
+      left: 104px;
+      top: 2px;
+      .stove-top1{
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 18px;
+          border-radius: 50%;
+          @include utility-border;
+          left: 3px;
+        }
+        &:after {
+          right: 3px;
+          left: auto;
+        }
+      }
+      .stove-top2{
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: 2px;
+          border-radius: 50%;
+          @include utility-border;
+          left: 6px;
+        }
+        &:after {
+          right: 6px;
+          left: auto;
+        }
+      }
+    }
+
+    .sink-tap-1,
+    .sink-tap-2 {
+      position: absolute;
+      width: 14px;
+      height: 28px;
+      @include utility-border;
+      left: 202px;
+      top: 10px;
+      border-radius: 4px;
+    }
+    .sink-tap-2 {
+      left: 223px;
+      width: 22px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        border: 1px solid #096b72;
+        left: -6px;
+        top: -9px;
+      }
+    }
+  }
+
+}
+
+
+.living-room {
+  .sofa {
+    transform: rotate(90deg);
+    left: -50px;
+    top: 125px;
+  }
+
+  .tv-set{
+    transform: rotate(90deg);
+    right: -42px;
+    top: 135px;
+  }
+
+  .rug {
+    left: 50px;
+    width: 110px;
+    height: 150px;
+    top: 65px;
+    position: absolute;
+    background: rgba($color-shade, 0.25);
+  }
+  .coffee-table{
+    top: 110px;
+    left: 100px;
+  }
+
+  .comfy-chair{
+    top: 30px;
+    left: 61px;
+  }
+  .large-window{
+    bottom: -6px;
+    right: 60px;
+  }
+
+  .small-window{
+    bottom: -6px;
+    left: 2px;
+    width: 30px;
+  }
+
+  .window-ver{
+    bottom: 2px;
+    left: -6px;
+    height: 30px;
+  }
+
+  .door-hor {
+    bottom: -55px;
+    left: 38px;
+    transform: scaleX(-1);
+  }
+}
+
+.bedroom-1 {
+
+  .block {
+    width: $one-meter * 2;
+    height: $one-meter / 2 - 4;
+    background: repeating-linear-gradient(45deg, $color-border, $color-border 2px, $color-bg 2px, $color-bg 8px);
+    @include utility-border;
+    border-width: 0 4px 4px 0;
+  }
+
+  .bed {
+    width: 160px;
+    height: 144px;
+    transform: scaleX(-1);
+    left: -2px;
+    top: 144px;
+    .pillow {
+      height: 40px;
+      top: 18px;
+      right: 15px;
+      &:nth-child(3) {
+        bottom: 18px;
+        top: auto;
+      }
+    }
+  }
+
+  .top-bed-table {
+    top: 109px;
+    left: -2px;
+  }
+  .bottom-bed-table {
+    bottom: 70px;
+    left: -2px;
+  }
+
+  .window-hor{
+    bottom: -6px;
+    left: 65px;
+  }
+
+  .door-hor {
+    bottom: -55px;
+    right: 5px;
+    transform: scaleX(-1);
+  }
+
+  .top-closet{
+    top: 37px;
+    left: -2px;
+  }
+
+  .bottom-closet{
+    bottom: -2px;
+    left: -2px;
+  }
+}
+
+.bedroom-2 {
+  .bed {
+    transform: rotate(90deg);
+    bottom: 21px;
+    right: -25px;
+    height: 99px;
+    width: 144px;
+    .pillow {
+      top: 23px;
+    }
+  }
+  .window-hor{
+    bottom: -6px;
+    left: 30px;
+  }
+
+  .closet{
+    transform: scaleX(-1);
+    right: -2px;
+  }
+}
+
+.balcony {
+  .chair-1{
+    top: 10px;
+    left: 300px;
+    transform: rotate(-30deg);
+  }
+  .chair-2{
+    top: 10px;
+    left: 370px;
+    transform: rotate(30deg);
+
+  }
+  .patio-table {
+    top: 35px;
+    left: 335px;
+  }
+
+  .window-hor {
+    bottom: -5px;
+    right: 2px;
+    width: 280px;
+    height: 3px;
+  }
+
+  .window-ver {
+    bottom: 2px;
+    right: -5px;
+    width: 3px;
+    height: 110px;
+  }
+}
+
+.bathroom {
+  .vanity {
+    top: -2px;
+    right: -2px;
+  }
+
+  .toilet{
+    bottom: -2px;
+    right: 70px;
+  }
+
+  .rug {
+    right: 35px;
+    top: 55px;
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    background: rgba($color-shade, 0.25);
+  }
+}

@@ -1,0 +1,325 @@
+@import 'core';
+
+.door-hor {
+  position: absolute;
+  width: 70px;
+  height: 55px;
+  overflow: hidden;
+  z-index: 10;
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    background: $color-bg;
+    width: 4px;
+    height: 50px;
+    border: 1px solid #096b72;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    background: $color-bg;
+    width: 120px;
+    right: 0px;
+    bottom: 3.5px;
+    border-radius: 82%;
+    border: 1px solid #096b72;
+  }
+}
+
+.door-ver {
+  position: absolute;
+  width: 55px;
+  height: 70px;
+  overflow: hidden;
+  z-index: 10;
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    background: $color-bg;
+    height: 4px;
+    width: 52px;
+    border: 1px solid #096b72;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background: $color-bg;
+    width: 100px;
+    height: 120px;
+    right: 1px;
+    bottom: 0.5px;
+    border-radius: 50%;
+    border: 1px solid #096b72;
+  }
+}
+
+.window-hor {
+  position: absolute;
+  height: 6px;
+  border: 2px solid $color-border;
+  width: 80px;
+  background: $color-window;
+  z-index: 10;
+}
+
+.window-ver {
+  position: absolute;
+  height: 140px;
+  border: 2px solid $color-border;
+  width: 6px;
+  background: $color-window;
+}
+
+.vanity {
+  width: 148px;
+  height: 44px;
+  position: absolute;
+  @include utility-border;
+  &:before {
+    content: "";
+    position: absolute;
+    border: 1px solid #096b72;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #096b72;
+    height: 20px;
+    width: 25px;
+    border-radius: 50%;
+    top: 12px;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #096b72;
+    left: 76px;
+    top: 2px;
+  }
+}
+
+.toilet {
+  width: 80px;
+  height: 14px;
+  position: absolute;
+  @include utility-border;
+  &:after {
+    content: "";
+    position: absolute;
+    @include utility-border;
+    height: 26px;
+    width: 24px;
+    border-radius: 20px 20px 0 0;
+    top: -30px;
+    left: 50%;
+    margin-left: -12px;
+  }
+}
+
+
+.shower {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  @include utility-border;
+  bottom: -2px;
+  left: -2px;
+  border-radius: 0 30% 0% 0;
+  &:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #096b72;
+    left: 6px;
+    bottom: 6px;
+  }
+}
+
+.bed {
+  width: 140px;
+  height: 70px;
+  position: absolute;
+  @include utility-border;
+  border-radius: 8px 0 0 8px;
+  background: $color-bg;
+  .blanket {
+    width: 55%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-right: 2px solid $color-border;
+    background: repeating-linear-gradient(
+                    to right,
+                    transparent,
+                    transparent 12px,
+                    rgba($color-border, 0.5) 12px,
+                    rgba($color-border, 0.5) 16px
+    ),
+    repeating-linear-gradient(
+                    to bottom,
+                    transparent,
+                    transparent 6px,
+                    rgba($color-border, 0.5) 6px,
+                    rgba($color-border, 0.5) 8px
+    );
+    &:before {
+      content: "";
+      position: absolute;
+      right: -18px;
+      width: 0;
+      height: 100%;
+      border-right: 2px solid $color-border;
+    }
+  }
+  .pillow {
+    width: 25px;
+    @include utility-border;
+    height: 40px;
+    border-radius: 6px;
+    right: 8px;
+    top: 14px;
+    position: absolute;
+    background: $color-shade;
+  }
+}
+
+.bed-table {
+  width: 40px;
+  height: 25px;
+  position: absolute;
+  @include utility-border;
+}
+
+.table {
+  width: 90px;
+  height: 15px;
+  bottom: -2px;
+  right: 20px;
+  position: absolute;
+  @include utility-border;
+  &:before {
+    content: "";
+    position: absolute;
+    @include utility-border;
+    width: 20px;
+    height: 16px;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-radius: 40px 40px 0 0;
+    background: linear-gradient(
+                    to bottom,
+                    transparent 0,
+                    transparent 50%,
+                    $color-border 50%,
+                    $color-border 60%,
+                    transparent 60%
+    );
+  }
+}
+
+.sofa {
+  width: 156px;
+  height: 60px;
+  position: absolute;
+  @include utility-border;
+  border-radius: 8px 8px 0 0;
+  background: $color-shade;
+  &:before {
+    content: "";
+    position: absolute;
+    @include utility-border;
+    border-width: 0 2px 2px;
+    width: 80%;
+    height: 70%;
+    left: 8%;
+    border-radius: 0 0 4px 4px;
+    background: $color-bg;
+  }
+}
+
+.comfy-chair {
+  position: absolute;
+  @include utility-border;
+  width: 30px;
+  height: 30px;
+  transform: rotate(60deg);
+  border-radius: 6px;
+  background: $color-shade;
+}
+
+.coffee-table,
+.patio-table {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  @include utility-border;
+  background: $color-bg;
+}
+
+.patio-table {
+  width: 30px;
+  height: 30px;
+}
+
+.patio-chair {
+  width: 34px;
+  height: 26px;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  @include utility-border;
+  background: $color-shade;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 82%;
+    border-radius: inherit;
+    background: $color-bg;
+    bottom: 0;
+    left: 10%;
+    border: 1px solid $color-border;
+    border-width: 1px 1px 0;
+  }
+}
+
+.tv-set {
+  width: 100px;
+  height: 20px;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  @include utility-border;
+}
+
+.closet{
+  @include utility-border;
+  width: $one-meter / 2;
+  height: 64px;
+  position: absolute;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 44px;
+    height: 30px;
+    transform: rotate(170deg);
+    border: 1px solid $color-border;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 47px;
+    height: 30px;
+    transform: rotate(25deg);
+    border: 1px solid $color-border;
+  }
+}
